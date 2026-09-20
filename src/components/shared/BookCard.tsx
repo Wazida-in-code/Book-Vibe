@@ -1,5 +1,6 @@
 import { BookType } from '@/types/bookType';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface BookProps {
@@ -85,9 +86,11 @@ const BookCard = ({book}: BookProps) => {
                 </div>
 
                 {/* Button */}
-                <button className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors duration-200">
-                    View Details →
-                </button>
+                <Link href={`/books/${book.bookId}`}>
+                    <button className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors duration-200">
+                        View Details →
+                    </button>
+                </Link>
             </div>
         </div>
     );
