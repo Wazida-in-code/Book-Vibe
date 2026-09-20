@@ -1,3 +1,4 @@
+import ReadBtn from "@/components/bookDetails/ReadBtn";
 import { BookType } from "@/types/bookType";
 import Image from "next/image";
 import React from "react";
@@ -118,10 +119,7 @@ const BookDetailsPage = async ({ params }: BookDetailsProps) => {
 
         {/* Actions */}
         <div className="card-actions mt-4">
-          <button className="btn bg-emerald-600 hover:bg-emerald-700 text-white border-none px-7">
-            Read
-          </button>
-
+          <ReadBtn book={book} />
           <button className="btn btn-outline border-slate-300 hover:bg-slate-100">
             ❤️Wishlist
           </button>
