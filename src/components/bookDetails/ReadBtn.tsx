@@ -5,6 +5,7 @@ import React, { useContext } from 'react';
 
 const ReadBtn = ({book}:{book:BookType}) => {
     const {read, setRead} = useContext(BookContext)
+    
     const handleReadBtn = () => {
         setRead([...read, book])
         alert(`You have read "${book.bookName}"`)
