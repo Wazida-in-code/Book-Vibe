@@ -12,14 +12,15 @@ interface BookDetailsProps {
 
 const getBooks = async() => {
     try{
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
-    const data = await res.json()
-    return data;
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
+        const data = await res.json()
+        return data;
     }catch(error){
         console.error("Error fatching books data:", error);
         return[]
     }
 }
+
 
 const BookDetailsPage = async ({ params }: BookDetailsProps) => {
   const { id } = await params;

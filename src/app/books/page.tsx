@@ -4,14 +4,16 @@ import BookCard from '@/components/shared/BookCard';
 
 const getBooks = async() => {
     try{
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
-    const data = await res.json()
-    return data;
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
+        const data = await res.json()
+        return data;
     }catch(error){
         console.error("Error fatching books data:", error);
         return[]
     }
 }
+
+
 const Books = async () => {
     const booksData = await getBooks();
     console.log(booksData, "Data");

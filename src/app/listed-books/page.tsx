@@ -1,9 +1,7 @@
 "use client";
-import BookCard from "@/components/shared/BookCard";
 import ListedBookCard from "@/components/shared/ListedBookCard";
 import { BookContext } from "@/context/BookContext";
 import { BookType } from "@/types/bookType";
-import Image from "next/image";
 import React, { useContext, useState } from "react";
 
 const ListedBooksPage = () => {

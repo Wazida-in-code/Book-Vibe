@@ -11,7 +11,6 @@ import {
   LabelProps,
   Tooltip,
 } from 'recharts';
-import { RechartsDevtools } from '@recharts/devtools';
 import { getPath } from 'recharts/types/shape/Curve';
 import { useContext } from 'react';
 import { BookContext } from '@/context/BookContext';
